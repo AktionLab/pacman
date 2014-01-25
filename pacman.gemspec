@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Pacman::VERSION
   spec.authors       = ["Chris Boertien"]
   spec.email         = ["chris@aktionlab.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Project management tool}
+  spec.description   = %q{Pacman provides a set of tools for easing the creation and management of projects.}
+  spec.homepage      = "http://github.com/aktionlab/pacman"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec", "~> 2.14"
 end
