@@ -9,8 +9,10 @@ module Pacman
     def create_project(name)
       FileUtils.mkdir name
       Dir.chdir name
-      Git.init
+      git = Git.init
       RVM.rvm :use, "ruby-2.1.0@#{name}", create: true, rvmrc: true
+      git.add all: true
+      git.commit 'Initial project setup'
     end
   end
 end

@@ -1,5 +1,6 @@
 require 'aruba/cucumber'
 require 'rvm'
+require 'git'
 
 Before do
   @dirs = ["sandbox"]

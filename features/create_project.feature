@@ -18,3 +18,8 @@ Feature: Create Project
   Scenario: Create rvmrc within the project
     When I run `pacman create_project test`
     Then a file named "test/.rvmrc" should exist
+
+  Scenario: Create an initial commit
+    When I run `pacman create_project test`
+    And I cd to "test"
+    Then git has a commit
