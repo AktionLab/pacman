@@ -5,5 +5,8 @@ Feature: Create Project
 
   Scenario: Create project directory
     When I run `pacman create_project test`
-    When I run `file test`
-    Then the stdout should contain "test: directory"
+    Then a directory named "test" should exist
+
+  Scenario: Initialize local git repository
+    When I run `pacman create_project test`
+    Then a directory named "test/.git" should exist
