@@ -10,3 +10,11 @@ Feature: Create Project
   Scenario: Initialize local git repository
     When I run `pacman create_project test`
     Then a directory named "test/.git" should exist
+
+  Scenario: Create rvm gemset
+    When I run `pacman create_project test`
+    Then an rvm gemset named "test" should exist
+
+  Scenario: Create rvmrc within the project
+    When I run `pacman create_project test`
+    Then a file named "test/.rvmrc" should exist
