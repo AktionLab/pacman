@@ -23,3 +23,7 @@ Feature: Create Project
     When I run `pacman create_project test`
     And I cd to "test"
     Then git has a commit
+
+  Scenario: Add a remote github repo if provided
+    When I run `pacman create_project test --origin AktionLab`
+    Then git has a remote named "origin" for "git@github.com:AktionLab/test.git"
