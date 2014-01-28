@@ -27,3 +27,7 @@ Feature: Create a new project
   Scenario: Add a remote github repo if provided
     When I run `pacman new test --origin AktionLab`
     Then git has a remote named "origin" for "git@github.com:AktionLab/test.git"
+
+  Scenario: Do not add a remote if no origin is provided
+    When I run `pacman new test`
+    Then git does not have a remote named "origin"
